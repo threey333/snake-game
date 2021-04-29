@@ -1,0 +1,187 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  background: -webkit-linear-gradient(
+    -45deg,
+    #ee7752,
+    #e73c7e,
+    #23a6d5,
+    #23d5ab
+  );
+  background-size: 120% 120%;
+}
+
+/* 版心  */
+.w {
+  margin: auto;
+  width: 1180px;
+}
+
+header {
+  height: 140px;
+  /* 把图像图像扩展至最大尺寸，以使其宽度和高度完全适应内容区域。(只要`宽或高`填满就不再扩展。) */
+  background-size: contain;
+  font-size: 32px;
+  line-height: 140px;
+  color: #fff;
+  text-align: center;
+}
+
+/*导航栏*/
+nav {
+  position: sticky;
+  top: 0px;
+  height: 60px;
+  background-color: rgba(119, 140, 163, 0.3);
+  z-index: 99;
+}
+.navigation-bar ul li {
+  float: left;
+  margin: 0 114.5px;
+  line-height: 60px;
+  font-size: 22px;
+  color: #eee;
+  cursor: pointer;
+}
+
+.navigation-bar ul li a {
+  color: #eee;
+}
+
+/* 导航栏里面的展示部分 */
+.exhibition {
+  width: 1180px;
+  background-color: #fff;
+  height: 300px;
+  /* 设置为弹性元素，使.exhibition的子元素右对齐排列 */
+  display: flex;
+  /* 设置相对定位，这样子可以.exhibition元素的位置 */
+  position: relative;
+}
+.item {
+  /* 设置缩放的动画持续时间为0.7秒 */
+  transition: 0.7s;
+  /* 对超出尺寸进行裁切，也就是隐藏溢出 */
+  overflow: hidden;
+  background-color: #000;
+}
+.item:hover {
+  /* 移动到.item元素上时，当前这个.b元素的收缩为0，这样子就会扩大自己，缩小其他.b元素 */
+  flex-shrink: 0;
+}
+.item img {
+  /* 没有给.item设置宽度，所有这400同样.item继承的宽度 */
+  width: 400px;
+}
+
+/* 内容栏 */
+.article {
+  position: relative;
+  top: 40px;
+  background-color: rgba(119, 140, 163, 0.3);
+  color: #fff7f7;
+}
+.bg p {
+  text-indent: 2em;
+  font-size: 18px;
+}
+.bg img {
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+}
+
+/* 贪吃蛇地图 */
+.map {
+  /* 地图需要相对定位 */
+  position: relative;
+  width: 1180px;
+  height: 700px;
+  background-color: rgba(91, 231, 196, 0.5);
+}
+.map button {
+  display: block;
+  margin: auto;
+  width: 100px;
+  height: 60px;
+  outline: none;
+  border: none;
+  background-color: rgba(119, 140, 163, 0.3);
+  cursor: pointer;
+}
+
+/* 底部 */
+.footer {
+  position: relative;
+  top: 80px;
+  background: rgba(119, 140, 163, 0.3);
+  height: 100px;
+  text-align: center;
+  font-size: 20px;
+  color: #eee;
+  overflow: hidden;
+}
+.one p {
+  margin: 18px;
+}
+.one span {
+  display: block;
+  position: relative;
+  top: 10px;
+  font-size: 16px;
+}
+
+/* 视频 */
+.sp,
+.sptow {
+  max-width: 1180px;
+  height: 500px;
+  /* background-color: rgb(51,51,51); */
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  position: relative;
+  top: 40px;
+}
+.sp1,
+.sptow1 {
+  width: 70%;
+  height: 460px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  top: 20px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+video {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.sp2,
+.sptow2 {
+  width: 22%;
+  height: 460px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  top: 20px;
+  /* background-color: #fff; */
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.sptow1 {
+  order: 1;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>催眠动画</title>
+    <style>
+      html::-webkit-scrollbar {
+        display: none;
+      }
+      body {
+        background: rgb(60, 60, 70);
+      }
+      .con {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        transform-style: preserve-3d;
+        perspective: 200px;
+        overflow: hidden;
+      }
+      .cir {
+        position: absolute;
+        box-sizing: border-box;
+        width: 60vh;
+        height: 60vh;
+        border-radius: 50%;
+        border: 15px solid var(--color);
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        animation: move 5s ease-in-out infinite reverse both;
+        animation-delay: calc(var(--i) * 0.32s);
+      }
+      .cir::before {
+        position: absolute;
+        content: "";
+        box-sizing: border-box;
+        width: 60vh;
+        height: 60vh;
+        border-radius: 50%;
+        border: 15px solid var(--color);
+        filter: blur(10px);
+      }
+      .cir::after {
+        position: absolute;
+        content: "";
+        box-sizing: border-box;
+        width: 60vh;
+        height: 60vh;
+        border-radius: 50%;
+        border: 15px solid var(--color);
+        filter: blur(15px);
+      }
+      @keyframes move {
+        0% {
+          transform: translateZ(190px) scale(1);
+        }
+        100% {
+          transform: translateZ(-600px) scale(0.1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="con">
+      <div class="cir" style="--i: 1; --color: #bfa"></div>
+      <div class="cir" style="--i: 2; --color: #bff"></div>
+      <div class="cir" style="--i: 3; --color: #bfb"></div>
+      <div class="cir" style="--i: 4; --color: #afa"></div>
+      <div class="cir" style="--i: 5; --color: #bba"></div>
+      <div class="cir" style="--i: 6; --color: #bbb"></div>
+      <div class="cir" style="--i: 7; --color: #ffa"></div>
+      <div class="cir" style="--i: 8; --color: #bff"></div>
+      <div class="cir" style="--i: 9; --color: #aaa"></div>
+      <div class="cir" style="--i: 10; --color: #dfc"></div>
+      <div class="cir" style="--i: 11; --color: #bdc"></div>
+      <div class="cir" style="--i: 12; --color: #bdd"></div>
+      <div class="cir" style="--i: 13; --color: #cdc"></div>
+      <div class="cir" style="--i: 14; --color: #efc"></div>
+      <div class="cir" style="--i: 15; --color: #bee"></div>
+      <div class="cir" style="--i: 16; --color: #efc"></div>
+    </div>
+    <script>
+      let con = document.querySelector(".con");
+
+      // 可是区域大小
+      let window_width = document.documentElement.clientWidth;
+      let window_height = document.documentElement.clientHeight;
+      // console.log(window_width, window_height);
+
+      // 监听鼠标移动事件，获取鼠标位置，计算鼠标在屏幕中的百分比
+      // document.onclick = function(){
+      //     con.
+      // }
+      con.addEventListener("mousemove", (e) => {
+        // 鼠标坐标
+        let left = e.clientX;
+        let top = e.clientY;
+        // 百分比
+        let left_p = (left / window_width) * 100;
+        let top_p = (top / window_height) * 100;
+        // 透视基点
+        con.style.perspectiveOrigin = left_p + "% " + top_p + "%";
+      });
+    </script>
+  </body>
+</html>

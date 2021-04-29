@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="js/food.js"></script>
+    <script src="js/Snake.js"></script>
+    <script src="js/game.js"></script>
+    <title>网页作品</title>
+  </head>
+  <body>
+    <header class="w"><h1>贪吃蛇小游戏</h1></header>
+    <nav class="w">
+      <div class="navigation-bar">
+        <ul>
+          <li id="li">首页</li>
+          <li id="li">游戏试玩</li>
+          <li><a href="./催眠动画.html">催眠动画</a></li>
+          <li id="li">更多</li>
+        </ul>
+      </div>
+    </nav>
+    
+    <!-- 展示栏 -->
+    <div class="exhibition w" >
+        <div class="item">
+            <img src="./images1/1.gif"></img>
+        </div>
+        <div class="item">
+            <img src="./images1/2.gif"></img>
+        </div>
+        <div class="item">
+            <img src="./images1/3.gif"></img>
+        </div>
+        <div class="item">
+            <img src="./images1/4.gif"></img>
+        </div>
+        <div class="item">
+            <img src="./images1/5.gif"></img>
+        </div>
+        <div class="item">
+            <img src="./images1/6.gif"></img>
+        </div>
+        <div class="item">
+            <img src="./images1/7.gif"></img>
+        </div>
+    </div>
+    <!-- 内容 -->
+    <article class="article w" ">
+        <section class="bg">
+            <h2>背景设定</h2><br/>
+            <p>  1976年，Gremlin平台推出了一款经典街机游戏Blockade。游戏中，两名玩家分别控制一个角色在屏幕上移动，所经之处砌起围栏。角色只能向左、右方向90度转弯，游戏目标保证让对方先撞上屏幕或围栏。　听起来有点复杂，其实就是下面这个样子;</p>
+            <p>基本上就是两条每走一步都会长大的贪吃蛇比谁后完蛋，玩家要做的就是避免撞上障碍物和越越长的身体。更多照片、视频可以看 GamesDBase 的介绍。</p>
+            <p>Blockade 很受欢迎，类似的游戏先后出现在 Atari 2600、TRS-80、苹果 2 等早期游戏机、计算机上。但真正让这种游戏形式红遍全球的还是21年后随诺基亚手机走向世界的贪吃蛇游戏——Snake。</p><br>
+            <img src="./images1/snake3.png" alt="贪吃蛇">
+        </section>
+        <section class="bg">
+            <h2>游戏特色</h2><br/>
+            <p>贪食蛇游戏操作简单，可玩性比较高。这个游戏难度最大的不是蛇长得很长的时候，而是开始。那个时候蛇身很短，看上去难度不大，却最容易死掉，因为把玩一条小短蛇让人容易走神，失去耐心。由于难度小，你会不知不觉加快调整方向的速度，在游走自如的时候蛇身逐渐加长了，而玩家却没有意识到危险，在最得意洋洋的一刻突然死亡。
+            </p>
+            <p>贪食蛇的另一个危险期在于游戏开始几十秒之后。由于玩家的注意力高度集中，精神紧张，此时局面稍好，就会不由自主地想放松一下，结果手指一松劲，贪食蛇就死了。所以贪食蛇可以算作一个敏捷型的小游戏。</p><br/>
+        </section>
+        <section class="bg">
+            <h2>操作指南</h2><br/>
+            <p>玩家使用方向键操控一条长长的蛇不断吞下豆子，同时蛇身随着吞下的豆子不断变长，当蛇头撞到蛇身或障壁时游戏结束。贪吃蛇最初为人们所知的是诺基亚手机附带的一个小游戏，它伴随着诺基亚手机走向世界。现在的贪吃蛇出现了许多衍生版本，并被移植到各种平台上。</p><br>
+            <img src="./images1/snake.jpg" alt="贪吃蛇"><br/>
+        </section>
+        <section class="bg">
+            <h2>游戏评价</h2><br/>
+            <p>和别的游戏不同，贪食蛇是一个悲剧性的游戏。许多电子游戏都是以操作者的胜利而告终，而贪食蛇的结局却是死亡。不管玩得多么纯熟，技术多么高超，你最终听到的都是贪食蛇的一声惨叫。当手机上的小蛇越长越长，积分越来越高的时候，死亡也就越来越近。那时候忙的不是为了吃豆子长身体，而是为了避免撞墙。你会发现你穷于应付，四处奔忙。贪食蛇最要命的就在一个“贪”字上。
+            </p>
+        </section>
+    </article>
+
+    <!-- 游戏地图 -->
+    <div id="map" class="map w" style="display: none;">
+      <button id="btn">开始游戏</button>
+    </div>
+    <!-- 底部 -->
+    <footer class="footer w" >
+        <div class="one">
+            <p>Copyright | 杨叶永 | 2181600 | GOAT | 2021/4/27/15:41 |</p>
+            <span>命运如同手上的掌纹，无论多么曲折，始终掌握在手中</span>
+        </div>
+    </footer>
+
+
+    <!-- 视频 -->
+    <div class="ship" style="display: none;">
+      <div class="topt" id="#top" ></div>
+      <div class="sp" >
+          <div class="sp1">
+              <video class="no1" src="./Mp4/1.mp4" controls="controls" loop></video>
+          
+          </div>
+          <div class="sp2">
+              <video src="./Mp4/2.mp4" loop="loop" autoplay="autoplay" muted></video>
+          </div>
+      </div>
+      <div class="sptow" >
+          <div class="sptow1">
+              <video class="no1" src="./Mp4/4.mp4" controls="controls" loop></video>
+          
+          </div>
+          <div class="sptow2">
+              <video src="./Mp4/3.mp4" loop="loop" autoplay="autoplay" muted></video>
+          </div>
+      </div>
+    </div>
+
+    
+
+
+    <script>
+      var exhibition=document.querySelector('.exhibition');
+      var article=document.querySelector('.article');
+      var footer=document.querySelector('.footer');
+      var ship=document.querySelector('.ship');
+      
+      //获取地图
+      var map = document.querySelector("#map");
+      var btn = document.querySelector("#btn");
+      var li=document.querySelectorAll('#li');
+
+      //定义一个boolean值为true的开关来控制渲染蛇，避免造成重复渲染
+      var boolean=true;
+
+      for(let i=0;i<li.length;i++){
+          switch (i) {
+            case 0:
+              li[0].addEventListener('click',function(){
+                exhibition.style.display="flex";
+                article.style.display="block";
+                footer.style.display="block";
+                ship.style.display="none";
+                var div=map.querySelectorAll('div');
+                let span=map.querySelectorAll('span');
+                map.style.display="none";
+                // boolean=true;
+                //div元素对象是伪数组，即使没有这个元素对象也会返回一个长度为0的伪数组。
+                if(div.length!==0){
+                  map.removeChild(div[0]);
+                }
+
+                //点击主页时清除蛇身
+                if(span.length!==0){
+                  for(let i=0;i<span.length;i++){
+                    map.removeChild(span[i]);
+                  }
+                }
+
+              })
+              break;
+              case 1:
+              li[1].addEventListener('click',function(){
+                exhibition.style.display="none";
+                article.style.display="none";
+                footer.style.display="none";
+                ship.style.display="noen";
+                map.style.display="block";
+                let span=map.querySelectorAll('span');
+                let div=map.querySelectorAll('div');
+                if(div.length!==0){
+                  map.removeChild(div[0]);
+                }
+                if(span.length!==0){
+                  for(let i=0;i<span.length;i++){
+                    map.removeChild(span[i]);
+                  }
+                }
+                //防止重复点击游戏试玩重复创建game游戏对象和渲染game对象
+                if(boolean){
+                  var game = new Game(map);
+                  window.game=game;
+                  window.game.render(map);
+                  // boolean=false;
+
+                }else{
+                  console.log(this);
+                  return false;
+                }
+              })
+              break;
+              case 2:
+              li[2].addEventListener('click',function(){
+                exhibition.style.display="none";
+                article.style.display="none";
+                footer.style.display="none";
+                ship.style.display="block";
+                map.style.display="none"
+                var div=map.querySelectorAll('div');
+                let span=map.querySelectorAll('span');
+                //div元素对象是伪数组，即使没有这个元素对象也会返回一个长度为0的伪数组。
+                if(div.length!==0){
+                  map.style.display="none";
+                  map.removeChild(div[0]);
+                }
+
+                                //点击主页时清除蛇身
+                if(span.length!==0){
+                  for(let i=0;i<span.length;i++){
+                    map.removeChild(span[i]);
+                  }
+                }
+
+              })
+              break;
+            default:
+              break;
+          }
+          btn.addEventListener("click", function () {
+               game.startGame(map);
+                //点击游戏开始后，案例隐藏
+              btn.style.display="none";
+      });
+
+      }
+
+
+    </script>
+  </body>
+</html>
